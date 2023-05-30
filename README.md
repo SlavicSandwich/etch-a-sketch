@@ -1,0 +1,1 @@
+Realization of a sketching tool, demonstrating DOM manipulation skills
