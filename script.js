@@ -7,8 +7,11 @@ function reset_color(block) {
   block.style.backgroundColor = "white";
 }
 
+
+
 function change_color() {
   if (random)this.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+  else if(opacity) this.style.backgroundColor += colorpicker.value
   else this.style.backgroundColor = colorpicker.value;
 }
 
@@ -44,6 +47,7 @@ function change_grid() {
 
 
 let random = false;
+let opacity = false;
 
 const grid = document.querySelector(".grid-container");
 create_grid(16);
@@ -56,4 +60,8 @@ const grid_changer = document.querySelector(".grid-change");
 grid_changer.addEventListener("click", change_grid);
 
 const random_mode = document.querySelector(".random-mode");
-random_mode.addEventListener("click", ()=>{random=!random});
+random_mode.addEventListener("click", ()=>{random=!random; opacity=false});
+
+const opacity_mode = document.querySelector('.opacity-mode');
+opacity_mode.addEventListener('click', ()=>{opacity=!opacity; random=false})
+
