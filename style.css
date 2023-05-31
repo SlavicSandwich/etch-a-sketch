@@ -20,27 +20,31 @@ body {
   align-items: center;
 }
 
+.grid-container {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 960px;
+  max-height: 960px;
 
-.grid-container{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  min-width: 960px;
+  max-width: 960px;
+
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
 }
 
-
-.grid-block{
-    margin:0;
-    padding:0;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+.grid-block {
+  margin: 0;
+  padding: 0;
+  border: 1px solid black !important; 
 }
 
-.grid-block:nth-child(16n + 1){
-    width: 100%;
-    border: 0;
-    height: 0;
+.grid-block:nth-child(16n + 1) {
+  width: 100%;
+  border: 0;
+  height: 0;
 }
